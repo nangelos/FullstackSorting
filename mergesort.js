@@ -1,5 +1,5 @@
 function split (wholeArray) {
-  var midP = Math.floor(wholeArray.length / 2);
+  let midP = Math.floor(wholeArray.length / 2);
   let firstHalf = wholeArray.slice(0, midP);
   let secondHalf = wholeArray.slice(midP);
   return [firstHalf, secondHalf]
@@ -28,7 +28,7 @@ function mergeSort(array) {
     return array
   }
   else {
-    var splitArrays = split(array);
+    let splitArrays = split(array);
     return merge(mergeSort(splitArrays[0]), mergeSort(splitArrays[1]))
   }
 }
